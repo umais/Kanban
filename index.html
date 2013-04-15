@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" /> 
+     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>  
+    <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <script src="scripts/script.js">
+        
+
+    </script>
+</head>
+<body>
+    <div id="main">
+        <header>
+            <hgroup><h1 id="mainHeading">Rapid Innovators</h1><h2 id="AppName">Kanban Board</h2></hgroup>
+    </header><hr />
+        <div id="indexCard"> <h4 id="createTask" class="LaneLabels">Create Task</h4><ol ><li id="mainCard" class="card" >Type Here and Drag</li></ol> <textarea cols="30" rows="3" placeholder="Type info here and then click button below to make it draggable"></textarea><br /><input type="button" value="Create Index Card" /></div>
+        <div id="container">
+        <div id="Board">
+            
+            <div id="BoardRow">
+                <div id="BoardLane1"><h1 class="LaneLabels" id="ToDo">To Do</h1><div  class="DragBox"><ol id="toDoList" class="dropbox"><li  class="BoardDrop">tesringggggggg</li></ol></div></div>
+                <div id="BoardLane2"><h1 class="LaneLabels"  id="InProgress">In Progress</h1><div id="todoDrag2" class="DragBox"><ol id="inProgressList" class="dropbox"><li id="Li1" class="BoardDrop">Drop Here</li></ol></div></div>
+                <div id="BoardLane3"><h1 class="LaneLabels"  id="Complete">Complete</h1><div id="todoDrag3" class="DragBox"><ol id="CompleteList" class="dropbox" ><li id="Li2"  class="BoardDrop">Drop Here</li></ol></div>
+            </div>
+        
+        </div>
+      </div>
+
+           
+</div>
+</body>
+</html>

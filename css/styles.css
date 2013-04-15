@@ -1,0 +1,133 @@
+﻿body
+{
+    background-color:steelblue;
+    margin-right:80px;
+    margin-left:20px;
+  
+}
+
+#main{
+
+padding-left:80px;
+
+}
+
+#board{
+     
+    display:table;
+     
+}
+#container{margin-left:40px;}
+#BoardRow{
+   
+    display:table-row;
+   
+   
+}
+
+#BoardLane1,#BoardLane2,#BoardLane3{
+    width: 300px;
+    height:400px;
+    display:table-cell;
+    
+    border-right:2px solid white;
+    border-top:2px solid white;
+    padding-left:20px;
+    padding-right:10px;
+}
+#mainHeading{color:white;
+             text-shadow:1px 1px 1px black;
+}
+#AppName{color:white;
+         text-shadow:2px -2px 1px black;
+         letter-spacing:2px;
+}
+#BoardLane1{
+    border-left:2px solid white;
+   
+}
+.LaneLabels{
+    
+   
+   text-shadow:1px 1px 1px black;
+    padding-left:40px;
+}
+
+#ToDo{color:red;}
+#InProgress{color:orange;}
+#Complete{color:green;}
+#createTask{
+    padding-left:0px;
+    color:black;
+    text-shadow:1px 1px 1px white;
+}
+
+
+.card{
+      background-image:url('../images/close_icon.gif');
+      background-repeat:no-repeat;
+      background-position:top right;
+background-color:rgb(255, 255, 0);
+width:250px;
+height:40px;
+overflow:hidden;
+border: 2px black solid ;
+font-size:14px;
+letter-spacing:2px;
+text-shadow:0.1em -0.1em .20em red;
+color:black;
+box-shadow:white 2px -2px 2px;
+
+}
+
+
+.card:hover{
+    cursor:move;
+}
+.DragBox{
+
+    width:260px;
+    height:150px;
+   
+}
+ol { list-style-type: none; margin: 0; padding: 0; margin-bottom: 10px;background: #eee; width:250px ;height:40px; }
+ul { list-style-type: none; margin: 0; padding: 0; margin-bottom: 10px; }
+li{
+    margin-bottom:5px;
+}
+
+#indexCard{
+    
+    margin-left:400px;
+    margin-bottom:30px;
+     
+}
+
+
+
+#mainCard{
+
+    display:none;
+}
+
+.BoardDrop
+{
+      background-image:url('../images/close_icon.gif');
+      background-repeat:no-repeat;
+      background-position:top right;
+background-color:rgb(255, 255, 0);
+width:250px;
+height:40px;
+overflow:hidden;
+border: 2px black solid ;
+font-size:14px;
+letter-spacing:2px;
+text-shadow:0.1em -0.1em .20em red;
+color:black;
+box-shadow:white 2px -2px 2px;
+
+}
+.BoardDrop:hover{
+    cursor:move;
+}
+
