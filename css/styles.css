@@ -44,11 +44,11 @@ overflow:auto;
     padding-left:20px;
     padding-right:10px;
 }
-#mainHeading{color:black;
-             text-shadow:1px 1px 1px gold;
+#mainHeading{color:white;
+             text-shadow:1px 1px 1px purple;
 }
-#AppName{color:black;
-         text-shadow:2px -2px 1px gold;
+#AppName{color:white;
+         text-shadow:2px -2px 1px purple;
          letter-spacing:2px;
 }
 #BoardLane0{
@@ -117,6 +117,18 @@ li{
      color:white;
 }
 
+.hideInput{
+    display:none;
+}
+
+.showInput{
+
+    display:block;
+}
+#indexCard:hover{
+    cursor:move;
+}
+
 hr{
     border:2px solid white;
 }
@@ -131,7 +143,7 @@ hr{
 {
       
      
-background-color:black;
+background-color:white;
 
 width:230px;
 height:40px;
@@ -139,9 +151,9 @@ overflow:hidden;
 border: 2px black solid ;
 font-size:14px;
 letter-spacing:2px;
-text-shadow:0.1em -0.1em .20em red;
-color:white;
-box-shadow:green 2px -2px 2px;
+
+color:black;
+box-shadow:purple 2px -2px 2px;
 
 }
 .BoardDrop:hover{

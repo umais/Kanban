@@ -15,8 +15,19 @@ $(function () {
 
         }
         initializeAlldroppers();
+        $("#indexCard").fadeOut(500);
+
        
-       
+    });
+
+    $("#newTask").click(function () {
+        
+       // $("#indexCard").attr("class","showInput");
+        $("#indexCard").fadeIn(1000);
+    
+        
+
+
     });
 });
 
