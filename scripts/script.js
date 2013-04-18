@@ -6,7 +6,7 @@ $(function () {
     initializeAlldroppers();
     $("#taskbtn").click(function () {
 
-        createItem($("#BoardLane0>div>ol")[0], $("#indextext").val())
+        createItem($("#BoardLane0>div>ol")[0], $("#indextext").val());
         if ($("#toDropDefault0"))
         {
             var a = $("#toDropDefault0");
@@ -49,6 +49,7 @@ function initializeAlldroppers() {
         }
     });
 
+    $("#indexCard").draggable();
     $(".BoardDrop").draggable({
         connectToSortable: ".dropbox", revert: "invalid", helper: "clone",
         start:function(){startParent=this.parentNode.getAttribute("id");},
@@ -78,7 +79,7 @@ function createKanbanBoard()
 {
     var kanbanRow = document.getElementById("BoardRow");
     var myLanes = document.createElement("div");
-    for (i = 0; i <= 3; i++)
+    for (i = 0; i < 30; i++)
     {
         //Setting Up The Lanes
         myLanes = document.createElement("div");

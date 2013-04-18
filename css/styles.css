@@ -1,6 +1,6 @@
 ﻿body
 {
-    background-color:azure;
+    background-color:orange;
     margin-right:80px;
     margin-left:20px;
   
@@ -21,45 +21,44 @@ padding-left:80px;
 }
 iframe{
 width:1100px;
-height:650px;
+height:450px;
 border:none;
 
-overflow-x:scroll;
-overflow-y:scroll;
+overflow:auto;
 }
 #container{margin-left:40px;}
 #BoardRow{
   
     display:table-row;
-   
+   background-color:yellow;
    
 }
 
 .mycell{
-    width: 300px;
-    height:400px;
+    width: 270px;
+   height:400px;
     display:table-cell;
-    
-    border-right:2px solid white;
-    border-top:2px solid white;
+    overflow:auto;
+    border:2px solid black;
+   
     padding-left:20px;
     padding-right:10px;
 }
 #mainHeading{color:black;
-             text-shadow:1px 1px 1px black;
+             text-shadow:1px 1px 1px gold;
 }
-#AppName{color:white;
-         text-shadow:2px -2px 1px black;
+#AppName{color:black;
+         text-shadow:2px -2px 1px gold;
          letter-spacing:2px;
 }
-#BoardLane1{
-    border-left:2px solid white;
+#BoardLane0{
+    border-left:2px solid black;
    
 }
 .LaneLabels{
     
    
-   text-shadow:1px 1px 1px black;
+   text-shadow:1px 1px 1px red;
     padding-left:40px;
 }
 
@@ -68,8 +67,8 @@ overflow-y:scroll;
 #Complete{color:green;}
 #createTask{
     padding-left:0px;
-    color:black;
-    text-shadow:1px 1px 1px white;
+    color:white;
+    text-shadow:1px 1px 1px red;
 }
 
 
@@ -100,7 +99,7 @@ box-shadow:white 2px -2px 2px;
     height:150px;
    
 }
-ol { list-style-type: none; margin: 0; padding: 0; margin-bottom: 10px;background: #eee; width:250px ; }
+ol { list-style-type: none; margin: 0; padding: 0; margin-bottom: 10px;background: orange; width:235px ;padding:10px; }
 ul { list-style-type: none; margin: 0; padding: 0; margin-bottom: 10px; }
 li{
     margin-bottom:5px;
@@ -108,11 +107,19 @@ li{
 
 #indexCard{
     
-    margin-left:400px;
-    margin-bottom:30px;
-     
+    position:fixed;
+    left:100px;
+    top:120px;
+    padding:20px;
+    
+    border:2px solid lightyellow;
+    background-color:purple;
+     color:white;
 }
 
+hr{
+    border:2px solid white;
+}
 
 
 #mainCard{
@@ -122,22 +129,26 @@ li{
 
 .BoardDrop
 {
-      background-image:url('../images/close_icon.gif');
-      background-repeat:no-repeat;
-      background-position:top right;
-background-color:papayawhip;
-width:260px;
+      
+     
+background-color:black;
+
+width:230px;
 height:40px;
 overflow:hidden;
 border: 2px black solid ;
 font-size:14px;
 letter-spacing:2px;
 text-shadow:0.1em -0.1em .20em red;
-color:black;
-box-shadow:white 2px -2px 2px;
+color:white;
+box-shadow:green 2px -2px 2px;
 
 }
 .BoardDrop:hover{
     cursor:move;
 }
 
+#indextext{
+
+border:2px solid blue;
+}
