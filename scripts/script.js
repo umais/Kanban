@@ -30,6 +30,10 @@ $(function () {
 
 
     });
+
+    $("#homelink").mouseover(function () {
+        alert("hello");
+    });
 });
 
 

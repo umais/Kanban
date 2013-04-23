@@ -2,13 +2,14 @@
 {
     background-color:orange;
     margin-right:80px;
-    margin-left:20px;
+    margin-left:40px;
+    margin-top:20px;
   
 }
 
 #main{
 
-padding-left:80px;
+
 
 }
 
@@ -20,13 +21,13 @@ padding-left:80px;
      
 }
 iframe{
-width:1100px;
+width:1125px;
 height:450px;
 border:none;
 
 overflow:auto;
 }
-#container{margin-left:40px;}
+
 #BoardRow{
   
     display:table-row;
@@ -44,13 +45,11 @@ overflow:auto;
     padding-left:20px;
     padding-right:10px;
 }
-#mainHeading{color:white;
-             text-shadow:1px 1px 1px purple;
+#mainHeading{
+              color:blue;
+             text-shadow:1px 1px 1px yellow;
 }
-#AppName{color:white;
-         text-shadow:2px -2px 1px purple;
-         letter-spacing:2px;
-}
+
 #BoardLane0{
     border-left:2px solid black;
    
@@ -163,4 +162,24 @@ box-shadow:purple 2px -2px 2px;
 #indextext{
 
 border:2px solid blue;
+}
+
+
+
+.inline{
+
+    border:2px solid black;
+    background-color:yellow;
+    color:blue;
+    display:inline;
+   padding:5px;
+}
+
+.inline:hover{
+    background-color:black;
+    color:yellow;
+    cursor:hand;
+    cursor:pointer;
+    font-size:18px;
+    border:2px solid yellow;
 }
