@@ -1,6 +1,8 @@
+
+
 SET QUOTED_IDENTIFIER OFF;
 GO
-USE [Kanban];
+USE [MytestDb];
 GO
 IF SCHEMA_ID(N'dbo') IS NULL EXECUTE(N'CREATE SCHEMA [dbo]');
 GO
@@ -46,8 +48,8 @@ GO
 -- Creating all tables
 -- --------------------------------------------------
 
--- Creating table 'Boards'
-CREATE TABLE [dbo].[Boards] (
+-- Creating table 'Board'
+CREATE TABLE [dbo].[Board] (
     [BoardID] int  NOT NULL,
     [MemberID] int  NULL,
     [BoardLanes] int  NULL,
@@ -55,8 +57,8 @@ CREATE TABLE [dbo].[Boards] (
 );
 GO
 
--- Creating table 'CARDs'
-CREATE TABLE [dbo].[CARDs] (
+-- Creating table 'CARD'
+CREATE TABLE [dbo].[CARD] (
     [CardID] int  NOT NULL,
     [ColumnID] int  NULL,
     [CardName] nvarchar(50)  NULL,
@@ -75,8 +77,8 @@ CREATE TABLE [dbo].[COLUMNS] (
 );
 GO
 
--- Creating table 'MEMBERs'
-CREATE TABLE [dbo].[MEMBERs] (
+-- Creating table 'MEMBER'
+CREATE TABLE [dbo].[MEMBER] (
     [MemberID] int  NOT NULL,
     [MemberName] nvarchar(50)  NOT NULL,
     [MemberEmail] nvarchar(50)  NULL,
@@ -98,14 +100,14 @@ GO
 -- --------------------------------------------------
 
 -- Creating primary key on [BoardID] in table 'Boards'
-ALTER TABLE [dbo].[Boards]
-ADD CONSTRAINT [PK_Boards]
+ALTER TABLE [dbo].[Board]
+ADD CONSTRAINT [PK_Board]
     PRIMARY KEY CLUSTERED ([BoardID] ASC);
 GO
 
 -- Creating primary key on [CardID] in table 'CARDs'
-ALTER TABLE [dbo].[CARDs]
-ADD CONSTRAINT [PK_CARDs]
+ALTER TABLE [dbo].[CARD]
+ADD CONSTRAINT [PK_CARD]
     PRIMARY KEY CLUSTERED ([CardID] ASC);
 GO
 
@@ -116,8 +118,8 @@ ADD CONSTRAINT [PK_COLUMNS]
 GO
 
 -- Creating primary key on [MemberID] in table 'MEMBERs'
-ALTER TABLE [dbo].[MEMBERs]
-ADD CONSTRAINT [PK_MEMBERs]
+ALTER TABLE [dbo].[MEMBER]
+ADD CONSTRAINT [PK_MEMBER]
     PRIMARY KEY CLUSTERED ([MemberID] ASC);
 GO
 
@@ -135,7 +137,7 @@ GO
 ALTER TABLE [dbo].[COLUMNS]
 ADD CONSTRAINT [FK_BOARD_COLUMNS]
     FOREIGN KEY ([BoardID])
-    REFERENCES [dbo].[Boards]
+    REFERENCES [dbo].[Board]
         ([BoardID])
     ON DELETE CASCADE ON UPDATE NO ACTION;
 
@@ -146,21 +148,21 @@ ON [dbo].[COLUMNS]
 GO
 
 -- Creating foreign key on [MemberID] in table 'Boards'
-ALTER TABLE [dbo].[Boards]
+ALTER TABLE [dbo].[Board]
 ADD CONSTRAINT [FK_Member_Board]
     FOREIGN KEY ([MemberID])
-    REFERENCES [dbo].[MEMBERs]
+    REFERENCES [dbo].[MEMBER]
         ([MemberID])
     ON DELETE CASCADE ON UPDATE NO ACTION;
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_Member_Board'
 CREATE INDEX [IX_FK_Member_Board]
-ON [dbo].[Boards]
+ON [dbo].[Board]
     ([MemberID]);
 GO
 
 -- Creating foreign key on [UserID] in table 'CARDs'
-ALTER TABLE [dbo].[CARDs]
+ALTER TABLE [dbo].[CARD]
 ADD CONSTRAINT [FK_USER_CARD]
     FOREIGN KEY ([UserID])
     REFERENCES [dbo].[USERS]
@@ -169,7 +171,7 @@ ADD CONSTRAINT [FK_USER_CARD]
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_USER_CARD'
 CREATE INDEX [IX_FK_USER_CARD]
-ON [dbo].[CARDs]
+ON [dbo].[CARD]
     ([UserID]);
 GO
 
@@ -177,7 +179,7 @@ GO
 ALTER TABLE [dbo].[USERS]
 ADD CONSTRAINT [FK_Member_Users]
     FOREIGN KEY ([MemberID])
-    REFERENCES [dbo].[MEMBERs]
+    REFERENCES [dbo].[MEMBER]
         ([MemberID])
     ON DELETE CASCADE ON UPDATE NO ACTION;
 
