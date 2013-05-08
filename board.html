@@ -22,7 +22,7 @@
         <div id="BoardRow" >
               <div class="mycell" ng-repeat="lane in lanes" id="BoardLane{{lane.position}}">
 
-                  <h1></h1>
+                  <h1>{{lane.name}}</h1>
                   <div class="DragBox" >
                       <ol class="dropbox" ng-repeat="card in lane.cards">
                           <li class="BoardDrop" id="toDropDefault{{card.position}}">{{card.cardText}}</li>
