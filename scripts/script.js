@@ -74,7 +74,7 @@ function initializeAlldroppers() {
             
             var par = this.parentNode;
             par.removeChild(this);
-            createItem(par, "hello testing");
+          //  createItem(par, "hello testing");
             
         }
     });
