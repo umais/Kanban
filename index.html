@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" ng-app ng-controller="Boards">
 <head>
     <meta charset="utf-8" />
     <title></title>
@@ -8,8 +8,9 @@
      <script src="http://code.jquery.com/jquery-1.9.1.js"></script>  
     <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
+     <script src="lib/angular/angular.js"></script>
     <script src="scripts/script1.js"></script>
-        
+          <script src="scripts/controllers.js"></script>
 
    
 </head>
@@ -17,8 +18,8 @@
     <div id="main">
         <header>
 <img src="images/stick1.png" />
-           <hgroup><h3 id="mainHeading">KANBAN BOARD</h3></hgroup>
-            <nav><ul><li class="inline" id="homelink">Home</li><li class="inline">Board</li><li class="inline">Register</li></ul></nav>
+           <hgroup><h3 id="mainHeading">{{name}}</h3></hgroup>
+            <nav><ul><li class="inline" id="homelink">Home</li><li class="inline">Board</li><li class="inline">Register</li></ul><br />Hello Owner Mr. {{owner}}</nav>
     </header><hr />
       
         <div id="container">

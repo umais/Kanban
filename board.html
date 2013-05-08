@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" ng-app ng-controller="Boards">
 <head>
     <meta charset="utf-8" />
     <title></title>
@@ -8,16 +8,29 @@
      <script src="http://code.jquery.com/jquery-1.9.1.js"></script>  
     <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
-    <script src="scripts/script.js"></script>
+    <script src="lib/angular/angular.js"></script>
+    <script src="scripts/script.js" defer="defer"></script>
+    <script src="scripts/controllers.js"></script>
 </head>
 <body>
 
       <div id="indexCard" class="hideInput"> <h4 id="createTask" class="LaneLabels">Create Task</h4><hr /><textarea id="indextext" cols="30" rows="3" placeholder="Type info here and then click button below to make it draggable"></textarea><br /><input type="button"  id="taskbtn" value="Create Index Card" /></div>
-     <a href="#" id="newTask">Add a new task !</a>
+     <a href="#" id="newTask">Add new Task!</a>
+
     <div id="Board">
             
-        <div id="BoardRow">
+        <div id="BoardRow" >
+              <div class="mycell" ng-repeat="lane in lanes" id="BoardLane{{lane.position}}">
 
+                  <h1></h1>
+                  <div class="DragBox" >
+                      <ol class="dropbox" ng-repeat="card in lane.cards">
+                          <li class="BoardDrop" id="toDropDefault{{card.position}}">{{card.cardText}}</li>
+
+                      </ol>
+
+                  </div>
+              </div>
                 
 
         </div>
