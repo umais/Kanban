@@ -1,6 +1,6 @@
 // JavaScript source code
 
-
+//Need to add two way binding with Controller. Will Work it tomorrow
 $(function () {
     //createKanbanBoard();
     initializeAlldroppers();

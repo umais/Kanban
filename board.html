@@ -20,17 +20,17 @@
     <div id="Board">
             
         <div id="BoardRow" >
-              <div class="mycell" ng-repeat="lane in lanes" id="BoardLane{{lane.position}}" ng-model="lane">
+              <div class="mycell" ng-repeat="lane in lanes" id="BoardLane{{lane.position}}" >
 
                   <h1>{{lane.name}}</h1>
                   <div class="DragBox" >
-                      <ol class="dropbox" >
-                          <li ng-repeat="card in lane.cards" class="BoardDrop" id="toDropDefault{{card.position}}">{{card.cardText}}</li>
+                      <ol class="dropbox"  >
+                          <li ng-repeat="card in lane.cards" class="BoardDrop" id="toDropDefault{{card.position}}" >{{card.cardText}}</li>
 
                       </ol>
                       
                   </div>
-                 <p ng-repeat="card in lane.cards">{{card.cardText}}</p>
+                 <p ng-repeat="card in lane.cards"  >{{card.cardText}}</p>
               </div>
                 
 
