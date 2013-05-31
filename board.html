@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" ng-app ng-controller="Boards">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" ng-app="myApp" ng-controller="Boards">
 <head>
     <meta charset="utf-8" />
     <title></title>
@@ -8,9 +8,12 @@
      <script src="http://code.jquery.com/jquery-1.9.1.js"></script>  
     <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    
+     
     <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular/angular-resource.js"></script>
     <script src="scripts/script.js" defer="defer"></script>
-    <script src="scripts/controllers.js"></script>
+    <script src="scripts/module.js"></script>
 </head>
 <body>
 
@@ -33,8 +36,9 @@
                  <p ng-repeat="card in lane.cards"  >{{card.cardText}}</p>
               </div>
                 
-
+            
         </div>
+        <div>{{lanesData}}</div>
       </div>
 </body>
 </html>

@@ -1,0 +1,39 @@
+[
+  {
+    "_id": "517681b1b29bb22513000003",
+    "name": "test1",
+    "owner": "test60",
+    "dateCreated": "2013-04-23T12:42:25.850Z",
+    "lanes": [
+      {
+        "_id": "5177b2b23d5ee82b1b000003",
+        "name": "lane2",
+        "position": 2,
+        "createdBy": "me",
+        "lastUpdatedBy": "me",
+        "dateLastUpdated": "2013-04-24T10:23:46.699Z",
+        "dateCreated": "2013-04-24T10:23:46.698Z",
+        "cards": []
+      },
+      {
+        "_id": "517b0d315980c9ea1d000005",
+        "name": "lane2",
+        "position": 2,
+        "createdBy": "me",
+        "lastUpdatedBy": "me",
+        "dateLastUpdated": "2013-04-26T23:26:41.014Z",
+        "dateCreated": "2013-04-26T23:26:41.014Z",
+        "cards": []
+      }
+    ],
+    "active": true
+  },
+  {
+    "owner": "test2",
+    "name": "test2",
+    "_id": "517acf505980c9ea1d000004",
+    "dateCreated": "2013-04-26T19:02:40.202Z",
+    "lanes": [],
+    "active": true
+  }
+]

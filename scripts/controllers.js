@@ -2,7 +2,10 @@
 
 /* Controllers */
 
+angular.module('myApp', '[ngResource]');
 function Boards($scope) {
+    
+    var myService=$resource('http://localhost:3000/:name');
     $scope.name="This is a Board";
     $scope.owner = "Umais Siddiqui" ;
     $scope.active = "true";
@@ -21,5 +24,6 @@ function Boards($scope) {
          "position": "2",
          "cards": [{ "name": "Card1", "cardText": "Faster than you think", "position": "0" }]
      }
-  ];
+    ];
+    $scope.myLanes = myService.get({ name: boards });
 }
