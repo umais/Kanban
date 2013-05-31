@@ -3,7 +3,7 @@
 /* Controllers */
 angular.module('myApp.service', ['ngResource']).
     factory('myLanes', function ($resource) {
-        return $resource('http://localhost\\:3000/boards', {}, {
+        return $resource('http://localhost\\:3000/:kanban', {kanban:'@id'}, {
             'get': { method: 'GET', isArray: true }
         });
     });
@@ -33,5 +33,5 @@ var Boards = function ($scope, myLanes) {
          "cards": [{ "name": "Card1", "cardText": "Faster than you think", "position": "0" }]
      }
     ];
-    $scope.lanesData = myLanes.get();
+    $scope.lanesData = myLanes.get({ kanban: 'boards' });
 }
