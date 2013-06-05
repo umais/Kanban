@@ -17,9 +17,7 @@ module.exports = function(mongoose) {
        lastUpdatedBy: {type: String},
        dateCreated: {type: Date, default: Date.now()},
        dateLastUpdated: {type: Date}
-
-
-    });
+    }, {versionKey: false});
 
     UserSchema
         .virtual('password')

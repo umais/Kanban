@@ -3,23 +3,9 @@ module.exports = function(mongoose) {
 
     var Schema = mongoose.Schema, ObjectId = Schema.ObjectId;
 
-    var CardSchema = new Schema ({
-        title   : {type: String, required: true},
-        cardText    : {type: String, required: true},
-        position    : {type: Number, required: true},
-        bgColor     : String,
-        createdBy   : {type: String, required: true},
-        dateCreated : {type: Date, default:Date.now},
-        lastUpdatedBy   : {type: String, required: true},
-        dateLastUpdated : Date
-    }, { versionKey: false });
-
-    modelObject.Card = mongoose.model('card', CardSchema, "Card");
-
     var LaneSchema = new Schema({
         name    : {type: String, required: true},
         position    : {type: Number, required: true},
-        cards   : [CardSchema],
         dateCreated : {type: Date, default:Date.now},
         createdBy : {type: String, required: true},
         lastUpdatedBy   : {type: String, required: true},

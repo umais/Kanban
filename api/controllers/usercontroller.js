@@ -16,7 +16,7 @@ module.exports = function (app, service) {
                 res.json({Error: "User object is null"})
 
             }
-            res.render('board', board)
+            res.render(user);
         });
     });
 
