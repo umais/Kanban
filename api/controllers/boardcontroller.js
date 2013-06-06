@@ -8,15 +8,13 @@ module.exports = function (app, service) {
             if (err) {
                 console.log(err);
                 res.send(err);
-<<<<<<< HEAD:lib/controllers/boardcontroller.js
+
             } 
-			res.contentType('json');
+	    res.contentType('json');
             res.send(board)
-=======
+
             }
-            res.contentType('json');
-            res.send('board', board)
->>>>>>> moved server to api folder:api/controllers/boardcontroller.js
+           
         });
     });
 
